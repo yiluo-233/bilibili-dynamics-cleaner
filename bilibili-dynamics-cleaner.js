@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         B站抽奖转发清理器（预览确认版）
-// @namespace    codex.local/bilibili-lottery-repost-cleaner
+// @name         B站抽奖转发清理器
+// @namespace    https://github.com/yiluo-233/bilibili-dynamics-cleaner/
 // @version      1.5.0
 // @description  扫描全部历史动态，仅列出带“互动抽奖”节点的转发及源动态已删除的转发，确认后批量删除。
-// @author       Codex
+// @author       Yiluo, Codex
 // @match        https://space.bilibili.com/*/dynamic*
 // @icon         https://www.bilibili.com/favicon.ico
 // @run-at       document-idle
@@ -291,7 +291,7 @@
     const style = document.createElement('style');
     style.textContent = `
       #blrc-launcher{position:fixed;left:24px;bottom:72px;z-index:2147483646;border:0;border-radius:6px;padding:8px 13px;background:#00aeec;color:#fff;font-size:12px;font-weight:700;box-shadow:0 3px 12px #0003;cursor:pointer}
-      #blrc-launcher.is-active::after{content:"";position:absolute;right:-3px;top:-3px;width:10px;height:10px;border-radius:50%;background:#f5222d;box-shadow:0 1px 4px #0004}
+      #blrc-launcher.is-active::after{content:"";position:absolute;right:-3px;top:-3px;width:7px;height:7px;border-radius:50%;background:#f5222d;box-shadow:0 1px 4px #0004}
       #blrc-panel{display:none;position:fixed;inset:6vh 6vw;z-index:2147483647;background:#fff;color:#18191c;border-radius:12px;box-shadow:0 12px 48px #0006;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow:hidden}
       #blrc-panel.is-open{display:flex;flex-direction:column}.blrc-head{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid #e3e5e7}.blrc-title{font-size:18px;font-weight:700;margin-right:auto}.blrc-head button{border:1px solid #c9ccd0;border-radius:6px;padding:8px 13px;background:#fff;cursor:pointer}.blrc-head button:disabled{opacity:.5;cursor:not-allowed}.blrc-head [data-action=delete]{background:#fa5a57;border-color:#fa5a57;color:#fff}.blrc-summary{padding:10px 20px;background:#f6f7f8;color:#61666d}.blrc-note{padding:0 20px 10px;background:#f6f7f8;color:#9499a0;font-size:12px}.blrc-list{overflow:auto;padding:8px 20px 20px}.blrc-item{display:flex;gap:12px;padding:12px 4px;border-bottom:1px solid #e3e5e7}.blrc-item.is-deleted{opacity:.5}.blrc-content{min-width:0;display:flex;flex-direction:column;gap:3px}.blrc-line{color:#18191c}.blrc-text{color:#61666d}.blrc-meta{font-size:12px;color:#9499a0}.blrc-meta a{color:#00aeec}.blrc-empty{padding:50px;text-align:center;color:#9499a0}
     `;
